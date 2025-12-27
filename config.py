@@ -6,7 +6,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
 # List Of Source Channel IDs From Which To Forward
 # Example: [-1001234567890, -1009876543210]
-SOURCE_CHANNELS = list(map(int, os.environ.get("SOURCE_CHANNELS", "-1002632419503, -1002269913541, -1001971879597").split(",")))
+SOURCE_CHANNELS = list(map(int, os.environ.get("SOURCE_CHANNELS", "-1002632419503, -1002612458623, -1001971879597").split(",")))
 
 # List Of Target Channel IDs To Forward To
 # Example: [-1001234567890, -1009876543210]
