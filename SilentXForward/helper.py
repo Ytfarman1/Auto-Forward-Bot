@@ -7,11 +7,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-START_TEXT = """<b>👋 Hello! I am SilentXForward Bot.</b>
+START_TEXT = """<b>👋 Hello! I am CrazyAutoForward Bot.</b>
 
 I Can Forward Videos And Documents From Multiple Channels To Multiple Other Channels, Filtering Out Unwanted Content.
 
-<b>Maintained By:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
+<b>Maintained By:</b> <a href="https://t.me/nkdcrazy</a>
 """
 
 HELP_TEXT = """<b>ℹ️ Help Menu</b>
@@ -28,15 +28,15 @@ I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channel
 2. Configure `SOURCE_CHANNELS` and `TARGET_CHANNELS` In Your Environment Variables.
 3. I Will Automatically Forward Videos And Documents!
 
-<b>Channel:</b> @SilentXBotz
+<b>Channel:</b> @nkdcrazy
 """
 
-ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
+ABOUT_TEXT = """<b>🤖 About Crazy Auto Forward bot</b>
 
 <b>Name:</b> SilentXForward
 <b>Version:</b> 2.0
-<b>Channel:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
-<b>Repository:</b> <a href="https://github.com/NBBotz/Auto-Forward-Bot">GitHub</a>
+<b>Channel:</b> <a href="https://t.me/nkdcrazy</a>
+<b>Repository:</b> <a href="https://t.me/nkdcrazy">GitHub</a>
 
 <b>Features:</b>
 - Multi-Source to Multi-Target
@@ -47,8 +47,8 @@ ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("📢 Channel", url="https://t.me/SilentXBotz"),
-            InlineKeyboardButton("🐱 GitHub", url="https://github.com/NBBotz/Auto-Forward-Bot")
+            InlineKeyboardButton("📢 Channel", url="https://t.me/nkdcrazy"),
+            InlineKeyboardButton("🐱 GitHub", url="https://t.me/nkdcrazy")
         ]
     ]
 )
