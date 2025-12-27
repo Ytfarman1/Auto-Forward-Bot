@@ -11,7 +11,7 @@ START_TEXT = """<b>👋 Hello! I am CrazyAutoForward Bot.</b>
 
 I Can Forward Videos And Documents From Multiple Channels To Multiple Other Channels, Filtering Out Unwanted Content.
 
-<b>Maintained By:</b> <a href="https://t.me/nkdcrazy</a>
+<b>Maintained By:</b> <a href=="https://t.me/nkdcrazy">CrazyHubBot</a>
 """
 
 HELP_TEXT = """<b>ℹ️ Help Menu</b>
