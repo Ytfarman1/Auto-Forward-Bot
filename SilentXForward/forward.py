@@ -84,15 +84,12 @@ async def process_queue(client):
                 message_queue.task_done()
                 continue
             
-            message_or_list, target_ids, forward_type = data
+            message_or_list, target_ids = data
             failed_targets = []
             
             for chat_id in target_ids:
                 try:
-                    if forward_type == "buffered":
-                        success = await forward_buffered_messages(client, message_or_list, chat_id)
-                    else:
-                        success = await forward_single_message(client, message_or_list, chat_id)
+                    success = await forward_buffered_messages(client, message_or_list, chat_id)
                     
                     if not success:
                         failed_targets.append(chat_id)
@@ -109,7 +106,7 @@ async def process_queue(client):
             
             if failed_targets:
                 logger.info(f"Re-queuing for {len(failed_targets)} failed target(s)")
-                await message_queue.put((message_or_list, failed_targets, forward_type))
+                await message_queue.put((message_or_list, failed_targets))
             
             message_queue.task_done()
             
@@ -149,7 +146,7 @@ async def process_buffered_messages(source_chat_id):
         for mapping in mappings:
             target_ids = mapping.get('target_ids', [])
             if target_ids:
-                await message_queue.put((messages.copy(), target_ids, "buffered"))
+                await message_queue.put((messages.copy(), target_ids))
                 logger.info(f"Queued buffered group ({message_count} files) from {source_chat_id} for {len(target_ids)} target(s)")
         
     except Exception as e:
