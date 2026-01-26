@@ -4,6 +4,9 @@ A Powerful And Efficient Telegram Bot Designed To Forward Videos And Documents F
 
 **Join Telegram - [SilentXBotz](https://t.me/SilentXBotz)**
 
+## What's New ? 
+- Now User Can Set There Source And Target Chat From Bot PM.
+
 ## Features
 
 - **Multi-Source & Multi-Target**: Supports Forwarding From Multiple Source Channels To Multiple Destination Channels.
@@ -22,8 +25,6 @@ The Bot Is Configured Using .
 | `API_ID` | Your Telegram API ID From [my.telegram.org](https://my.telegram.org) | Yes | - |
 | `API_HASH` | Your Telegram API Hash From [my.telegram.org](https://my.telegram.org) | Yes | - |
 | `BOT_TOKEN` | Your Bot Token From [@BotFather](https://t.me/BotFather) | Yes | - |
-| `SOURCE_CHANNELS` | Comma-Separated List Of Source Channel IDs (e.g., `-100123, -100456`) | Yes | - |
-| `TARGET_CHANNELS` | Comma-separated List Of Target Channel IDs (e.g., `-100789, -100321`) | Yes | - |
 | `WEB_SERVER` | Set To `True` To Enable The Keep-Alive Web Server. | Optional | `True` |
 | `PORT` | Port For The Web Server. | Optional | `8080` |
 | `TG_WORKERS` | Number Of Pyrogram workers. | Optional | `4` |
