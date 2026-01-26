@@ -1,11 +1,12 @@
+import time
 import asyncio
 import logging
 import threading
-import time
+import pyrogram.utils
 import urllib.request
 from aiohttp import web
 from pyrogram import Client
-from SilentXForward.forward import process_queue
+from SilentXForward.forward import start_processor
 from SilentXForward import web_server
 from config import API_ID, API_HASH, BOT_TOKEN, TG_WORKERS, WEB_SERVER, PORT, APP_URL
 
@@ -53,15 +54,19 @@ class Bot(Client):
         await super().start(*args, **kwargs)
         me = await self.get_me()
         logger.info(f"Bot Started! Name: {me.first_name} (@{me.username})")
+        
         if WEB_SERVER:
             await create_server()
-        asyncio.create_task(process_queue(self))
-        
+            
+        self.processor_tasks = await start_processor(self)
+        logger.info(f"✅ Auto Forwarding Started For {len(self.processor_tasks)} Sources")
 
     async def stop(self, *args, **kwargs):
+        logger.info("🛑 Stopping Auto Forwarding...")
+        for task in self.processor_tasks.values():
+            task.cancel()
         await super().stop(*args, **kwargs)
         logger.info("Bot Stopped")
-
 
 if __name__ == '__main__':
     Bot().run()
