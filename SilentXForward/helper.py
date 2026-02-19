@@ -11,7 +11,7 @@ START_TEXT = """<b>👋 Hello! I am SilentXForward Bot.</b>
 
 I Can Forward Videos And Documents From Multiple Channels To Multiple Other Channels, Filtering Out Unwanted Content.
 
-<b>Maintained By:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
+<b>Maintained By:</b> <a href="https://t.me/nkdcrazy">CRAZYHUBBOT</a>
 """
 
 HELP_TEXT = """<b>ℹ️ Help Menu</b>
@@ -33,12 +33,12 @@ I Am An Auto-Forward Bot. I Forward Files From Source Channels To Target Channel
 2. Use /set command to link source to target channels.
 3. I Will Automatically Forward Videos And Documents!
 
-<b>Channel:</b> @SilentXBotz
+<b>Channel:</b> @nkdcrazy
 """
 
 ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
 
-<b>Name:</b> SilentXForward
+<b>Name:</b> CRAZYHUBBOT
 <b>Version:</b> 2.0
 <b>Channel:</b> <a href="https://t.me/SilentXBotz">SilentXBotz</a>
 <b>Repository:</b> <a href="https://github.com/NBBotz/Auto-Forward-Bot">GitHub</a>
@@ -54,7 +54,7 @@ ABOUT_TEXT = """<b>🤖 About SilentXForward</b>
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("📢 Channel", url="https://t.me/SilentXBotz"),
+            InlineKeyboardButton("📢 Channel", url="https://t.me/nkdcrazy"),
             InlineKeyboardButton("🐱 GitHub", url="https://github.com/NBBotz/Auto-Forward-Bot")
         ]
     ]
